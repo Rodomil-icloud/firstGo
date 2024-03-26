@@ -38,10 +38,6 @@ func chekNumber(arr []string) {
 		} else {
 			calcNumb(arr)
 		}
-
-		fmt.Println(arr[0])
-		fmt.Println(arr[1])
-		fmt.Println(arr[2])
 	}
 }
 
@@ -54,6 +50,12 @@ func calcRim(arr []string) {
 	}
 	if num2 == -1 {
 		panic("Выдача паники, так как строка не является математической операцией.")
+	}
+	if num1 > 10 {
+		panic("Выдача паники, так как число более 10.")
+	}
+	if num2 > 10 {
+		panic("Выдача паники, так как число более 10.")
 	}
 	switch arr[1] {
 	case "+":
@@ -113,6 +115,12 @@ func calcNumb(arr []string) {
 	toNumber2, err := strconv.Atoi(arr[2])
 	if err != nil {
 		panic("Выдача паники, так как строка не является математической операцией.")
+	}
+	if toNumber1 > 10 {
+		panic("Выдача паники, так как число более 10.")
+	}
+	if toNumber2 > 10 {
+		panic("Выдача паники, так как число более 10.")
 	}
 	switch arr[1] {
 	case "+":
