@@ -17,8 +17,6 @@ func main() {
 		fmt.Println("Введите значение")
 		text, _ := reader.ReadString('\n') // Ждет ввода данных в формате строки
 		text = strings.TrimSpace(text)     // Очищает все пустоты (пробелы, табуляцию)
-		toNumber, _ := strconv.Atoi(text)  // Преобразование строки в число
-		fmt.Println(toNumber + 8)          // Вывод результата
 
 		arrStrig := strings.Split(text, " ")
 		chekNumber(arrStrig)
@@ -81,8 +79,8 @@ func calcRim(arr []string) {
 }
 
 func rimToInt(item string) int {
-	a := []string{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"}
-	num := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	a := []string{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"}
+	num := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 	for i, n := range a {
 		if item == n {
 			return num[i]
